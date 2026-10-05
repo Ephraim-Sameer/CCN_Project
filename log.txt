@@ -1,0 +1,805 @@
+Wed Nov 26 18:25:55 2025   Switch1   Switch>enable
+Wed Nov 26 18:25:55 2025   Switch1   Switch#configure terminal
+Wed Nov 26 18:25:55 2025   Switch1   Switch(config)#interface FastEthernet3/1
+Wed Nov 26 18:26:04 2025   Router0   Router>enable
+Wed Nov 26 18:26:04 2025   Router0   Router#configure terminal
+Wed Nov 26 18:26:04 2025   Router0   Router(config)#interface FastEthernet0/0
+Wed Nov 26 18:26:05 2025   Router0   Router(config-if)#no shutdown
+Sun Dec 7 02:26:42 2025   Router1   Router>enable
+Sun Dec 7 02:26:42 2025   Router1   Router#configure terminal
+Sun Dec 7 02:26:42 2025   Router1   Router(config)#interface Serial2/0
+Sun Dec 7 02:26:43 2025   Router1   Router(config-if)#no shutdown
+Sun Dec 7 02:26:48 2025   Router0   Router>enable
+Sun Dec 7 02:26:48 2025   Router0   Router#configure terminal
+Sun Dec 7 02:26:48 2025   Router0   Router(config)#interface Serial2/0
+Sun Dec 7 02:26:49 2025   Router0   Router(config-if)#no shutdown
+Sun Dec 7 02:27:13 2025   Router0   Router(config-if)#exit
+Sun Dec 7 02:27:13 2025   Router0   Router(config)#interface FastEthernet1/0
+Sun Dec 7 02:27:14 2025   Router0   Router(config-if)#no shutdown
+Sun Dec 7 02:27:20 2025   Router1   Router(config-if)#exit
+Sun Dec 7 02:27:20 2025   Router1   Router(config)#interface FastEthernet0/0
+Sun Dec 7 02:27:22 2025   Router1   Router(config-if)#no shutdown
+Sun Dec 7 02:27:30 2025   Router1   Router(config-if)#exit
+Sun Dec 7 02:27:30 2025   Router1   Router(config)#interface FastEthernet4/0
+Sun Dec 7 02:27:32 2025   Router1   Router(config-if)#no shutdown
+Sun Dec 7 02:27:42 2025   Switch2   Switch>enable
+Sun Dec 7 02:27:42 2025   Switch2   Switch#configure terminal
+Sun Dec 7 02:27:42 2025   Switch2   Switch(config)#interface FastEthernet2/1
+Sun Dec 7 02:27:50 2025   ASA0   ciscoasa>enable
+Sun Dec 7 02:27:50 2025   ASA0   ciscoasa#configure terminal
+Sun Dec 7 02:27:50 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Sun Dec 7 02:27:51 2025   ASA0   ciscoasa(config-if)#no shutdown
+Sun Dec 7 02:35:44 2025   ASA0   ciscoasa#configure terminal
+Wed Dec 10 01:02:47 2025   Router1   Router>enable
+Wed Dec 10 01:02:47 2025   Router1   Router#configure terminal
+Wed Dec 10 01:02:47 2025   Router1   Router(config)#interface FastEthernet1/0
+Wed Dec 10 01:02:48 2025   Router1   Router(config-if)#no shutdown
+Wed Dec 10 01:10:48 2025   ASA0   ciscoasa>enable
+Wed Dec 10 01:10:48 2025   ASA0   ciscoasa#configure terminal
+Wed Dec 10 01:10:48 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/2
+Wed Dec 10 01:10:49 2025   ASA0   ciscoasa(config-if)#no shutdown
+Wed Dec 10 01:12:02 2025   ASA0   ciscoasa#configure terminal
+Wed Dec 10 01:12:02 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/2
+Wed Dec 10 01:16:32 2025   Router1   Router>enable
+Wed Dec 10 01:16:32 2025   Router1   Router#configure terminal
+Wed Dec 10 01:16:32 2025   Router1   Router(config)#interface FastEthernet0/0
+Wed Dec 10 01:16:40 2025   Router1   Router(config-if)#ip address 172.16.0.197 255.255.0.0
+Wed Dec 10 01:16:42 2025   Router1   Router(config-if)#ip address 172.16.0.197 255.255.0.0
+Wed Dec 10 01:16:46 2025   Router1   Router(config-if)#ip address 172.16.0.197 255.255.255.252
+Wed Dec 10 01:16:48 2025   Router1   Router(config-if)#ip address 172.16.0.197 255.255.255.252
+Wed Dec 10 01:17:04 2025   ASA0   ciscoasa(config-if)#exit
+Wed Dec 10 01:17:04 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Wed Dec 10 01:17:17 2025   ASA0   ciscoasa#ex
+Wed Dec 10 01:17:18 2025   ASA0   ciscoasa>ex
+Wed Dec 10 01:17:21 2025   ASA0   ciscoasa>exit
+Wed Dec 10 01:17:25 2025   ASA0   ciscoasa>?
+Wed Dec 10 01:17:30 2025   ASA0   ciscoasa>log
+Wed Dec 10 01:17:32 2025   ASA0   ciscoasa>logoff
+Wed Dec 10 01:17:38 2025   ASA0   ciscoasa>en
+Wed Dec 10 01:17:46 2025   ASA0   ciscoasa#conf t
+Wed Dec 10 01:17:55 2025   ASA0   ciscoasa(config)#int gig1/1
+Wed Dec 10 01:18:03 2025   ASA0   ciscoasa(config-if)#nameif outside
+Wed Dec 10 01:18:21 2025   ASA0   ciscoasa(config-if)#ip add 172.16.0.198 255.255.255.252
+Wed Dec 10 01:18:24 2025   ASA0   ciscoasa(config-if)#no shut
+Wed Dec 10 01:18:46 2025   ASA0   ciscoasa(config-if)#ex
+Wed Dec 10 01:18:50 2025   ASA0   ciscoasa(config)#enable pass
+Wed Dec 10 01:18:52 2025   ASA0   ciscoasa(config)#cisco
+Wed Dec 10 01:18:57 2025   ASA0   ciscoasa(config)#enable pass cisco
+Wed Dec 10 01:19:01 2025   ASA0   ciscoasa(config)#ex
+Wed Dec 10 01:19:01 2025   ASA0   ciscoasa#ex
+Wed Dec 10 01:19:03 2025   ASA0   ciscoasa>en
+Wed Dec 10 01:19:17 2025   ASA0   ciscoasa#conf t
+Wed Dec 10 01:19:24 2025   ASA0   ciscoasa(config)#nameif inside
+Wed Dec 10 01:19:33 2025   ASA0   ciscoasa(config)#int gig1/2
+Wed Dec 10 01:19:38 2025   ASA0   ciscoasa(config-if)#nameif inside
+Wed Dec 10 01:19:50 2025   ASA0   ciscoasa(config-if)#ip add 172.168.0.1 255.255.255.192
+Wed Dec 10 01:21:00 2025   ASA0   ciscoasa(config-if)#exit
+Wed Dec 10 01:21:00 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Wed Dec 10 01:21:09 2025   ASA0   ciscoasa(config-if)#exit
+Wed Dec 10 01:21:09 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Wed Dec 10 01:21:11 2025   ASA0   ciscoasa(config-if)#exit
+Wed Dec 10 01:21:11 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Wed Dec 10 01:22:02 2025   ASA0   ciscoasa(config-if)#exit
+Wed Dec 10 01:22:02 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Wed Dec 10 01:23:56 2025   Router1   Router(config-if)#exit
+Wed Dec 10 01:23:56 2025   Router1   Router(config)#interface Serial2/0
+Wed Dec 10 01:24:02 2025   Router1   Router(config-if)#ip address 172.16.0.194 255.255.255.252
+Wed Dec 10 01:24:04 2025   Router1   Router(config-if)#ip address 172.16.0.194 255.255.255.252
+Wed Dec 10 01:24:05 2025   Router1   Router(config-if)#ip address 172.16.0.194 255.255.255.252
+Wed Dec 10 01:24:17 2025   Router0   Router>enable
+Wed Dec 10 01:24:17 2025   Router0   Router#configure terminal
+Wed Dec 10 01:24:17 2025   Router0   Router(config)#interface Serial2/0
+Wed Dec 10 01:24:23 2025   Router0   Router(config-if)#ip address 172.16.0.193 255.255.0.0
+Wed Dec 10 01:24:25 2025   Router0   Router(config-if)#ip address 172.16.0.193 255.255.0.0
+Wed Dec 10 01:24:28 2025   Router0   Router(config-if)#ip address 172.16.0.193 255.255.255.252
+Wed Dec 10 01:24:30 2025   Router0   Router(config-if)#ip address 172.16.0.193 255.255.255.252
+Wed Dec 10 01:26:03 2025   Router0   Router(config-if)#exit
+Wed Dec 10 01:26:03 2025   Router0   Router(config)#interface FastEthernet0/0
+Wed Dec 10 01:26:07 2025   Router0   Router(config-if)#ip address 172.16.0.129 255.255.255.252
+Wed Dec 10 01:26:11 2025   Router0   Router(config-if)#ip address 172.16.0.129 255.255.255.252
+Wed Dec 10 01:26:21 2025   Router0   Router(config-if)#exit
+Wed Dec 10 01:26:21 2025   Router0   Router(config)#interface FastEthernet1/0
+Wed Dec 10 01:26:28 2025   Router0   Router(config-if)#ip address 172.16.0.161 255.255.255.252
+Wed Dec 10 01:26:29 2025   Router0   Router(config-if)#ip address 172.16.0.161 255.255.255.252
+Wed Dec 10 01:27:37 2025   Router1   Router(config-if)#exit
+Wed Dec 10 01:27:37 2025   Router1   Router(config)#interface FastEthernet0/0
+Wed Dec 10 01:27:38 2025   Router1   Router(config-if)#exit
+Wed Dec 10 01:27:38 2025   Router1   Router(config)#interface FastEthernet1/0
+Wed Dec 10 01:28:24 2025   Router1   Router(config-if)#exit
+Wed Dec 10 01:28:24 2025   Router1   Router(config)#interface FastEthernet0/0
+Wed Dec 10 01:29:42 2025   Switch0   Switch>en
+Wed Dec 10 01:29:45 2025   Switch0   Switch#conf t
+Wed Dec 10 01:29:50 2025   Switch0   Switch(config)#vlan 10
+Wed Dec 10 01:29:54 2025   Switch0   Switch(config-vlan)#name Admin
+Wed Dec 10 01:30:01 2025   Switch0   Switch(config-vlan)#vlan 20
+Wed Dec 10 01:30:04 2025   Switch0   Switch(config-vlan)#name Staff
+Wed Dec 10 01:30:07 2025   Switch0   Switch(config-vlan)#ex
+Wed Dec 10 01:30:21 2025   Switch0   Switch(config)#ho SecondOfficeSwitch
+Wed Dec 10 01:31:09 2025   Switch0   SecondOfficeSwitch(config)#int fa 3/1
+Wed Dec 10 01:31:19 2025   Switch0   SecondOfficeSwitch(config-if)#switch mode trunk
+Wed Dec 10 01:31:30 2025   Switch0   SecondOfficeSwitch(config-if)#int fa 0/1
+Wed Dec 10 01:37:52 2025   Switch0   SecondOfficeSwitch(config-if)#switch mode access
+Wed Dec 10 01:37:59 2025   Switch0   SecondOfficeSwitch(config-if)#switch mode vlan 10
+Wed Dec 10 01:38:21 2025   Switch0   SecondOfficeSwitch(config-if)#switch access vlan 10
+Wed Dec 10 01:38:39 2025   Switch0   SecondOfficeSwitch(config-if)#ex
+Wed Dec 10 01:38:44 2025   Switch0   SecondOfficeSwitch(config)#int fa 2/1
+Wed Dec 10 01:38:48 2025   Switch0   SecondOfficeSwitch(config-if)#switch mode access
+Wed Dec 10 01:38:54 2025   Switch0   SecondOfficeSwitch(config-if)#switch access vlan 20
+Wed Dec 10 01:39:58 2025   Switch0   SecondOfficeSwitch(config-if)#ex
+Wed Dec 10 01:40:02 2025   Switch0   SecondOfficeSwitch(config)#int fa 1/1
+Wed Dec 10 01:40:07 2025   Switch0   SecondOfficeSwitch(config-if)#switch mode access
+Wed Dec 10 01:40:12 2025   Switch0   SecondOfficeSwitch(config-if)#switch access vlan 20
+Wed Dec 10 01:40:33 2025   Switch0   SecondOfficeSwitch#sh vlan b
+Wed Dec 10 02:00:28 2025   ASA0   ciscoasa(config-if)#ex
+Wed Dec 10 02:00:37 2025   ASA0   ciscoasa(config)#enable loggin
+Wed Dec 10 02:00:51 2025   ASA0   ciscoasa(config)#ex
+Wed Dec 10 02:00:56 2025   ASA0   ciscoasa#enable logging
+Wed Dec 10 02:02:00 2025   ASA0   ciscoasa#conft
+Wed Dec 10 02:02:03 2025   ASA0   ciscoasa#conf t
+Wed Dec 10 02:02:07 2025   ASA0   ciscoasa(config)#logging on
+Wed Dec 10 02:02:55 2025   ASA0   ciscoasa(config)#logging buffered debugging
+Wed Dec 10 02:03:00 2025   ASA0   ciscoasa(config)#logging console debugging
+Wed Dec 10 02:03:04 2025   ASA0   ciscoasa(config)#logging monitor debugging
+Wed Dec 10 02:04:11 2025   ASA0   ciscoasa(config)#logging buffered 7
+Wed Dec 10 02:04:26 2025   ASA0   ciscoasa(config)#logging console 7
+Wed Dec 10 02:05:15 2025   ASA0   ciscoasa(config)#logging enable
+Wed Dec 10 02:05:24 2025   ASA0   ciscoasa(config)#logging buffered debugging
+Wed Dec 10 02:05:34 2025   ASA0   ciscoasa(config)#logging buffered informational
+Wed Dec 10 02:05:36 2025   ASA0   ciscoasa(config)#logging buffered informational
+Wed Dec 10 02:05:44 2025   ASA0   ciscoasa(config)#logging console debugging
+Wed Dec 10 02:06:12 2025   ASA0   ciscoasa#sh version
+Wed Dec 10 02:06:55 2025   ASA0   ciscoasa#conf t
+Wed Dec 10 02:07:02 2025   ASA0   ciscoasa(config)#logging enable
+Wed Dec 10 02:08:28 2025   Router1   Router>en
+Wed Dec 10 02:08:29 2025   Router1   Router#conf t
+Wed Dec 10 02:08:34 2025   Router1   Router(config)#int s 0/1/0
+Wed Dec 10 02:08:38 2025   Router1   Router(config)#int s0/1/0
+Wed Dec 10 02:08:54 2025   Router1   Router(config)#int s2/0
+Wed Dec 10 02:09:17 2025   Router1   Router(config-if)#no ip access-group
+Wed Dec 10 02:09:24 2025   Router1   Router(config-if)#no ip access-group 100 in
+Wed Dec 10 02:09:39 2025   ASA0   ciscoasa(config)#access-list BLOCK_HACKER extended deny ip host 172.16.0.163 host 172.16.0.10
+Wed Dec 10 02:09:53 2025   ASA0   ciscoasa(config)#access-list BLOCK_HACKER extended permit ip any any
+Wed Dec 10 02:10:00 2025   ASA0   ciscoasa(config)#access-group BLOCK_HACKER in interface outside
+Wed Dec 10 02:14:24 2025   Router0   Router>en
+Wed Dec 10 02:14:27 2025   Router0   Router#conf t
+Wed Dec 10 02:14:34 2025   Router0   Router(config)#ip route 172.16.0.0 255.255.255.192 172.16.0.194
+Wed Dec 10 02:18:25 2025   Router0   Router>en
+Wed Dec 10 02:18:27 2025   Router0   Router#conf t
+Wed Dec 10 02:18:30 2025   Router0   Router(config)#ip route 172.16.0.0 255.255.255.192 172.16.0.194
+Wed Dec 10 02:20:00 2025   Router1   Router>en
+Wed Dec 10 02:20:02 2025   Router1   Router#conf 
+Wed Dec 10 02:20:05 2025   Router1   Router(config)#ip route 172.16.0.0 255.255.255.192 172.16.0.198
+Wed Dec 10 02:21:03 2025   Router0   Router>en
+Wed Dec 10 02:21:04 2025   Router0   Router#conf t
+Wed Dec 10 02:21:06 2025   Router0   Router(config)#ip route 0.0.0.0 0.0.0.0 172.16.0.194
+Wed Dec 10 02:21:21 2025   Router1   Router(config)#ip route 172.16.0.0 255.255.255.192 172.16.0.198
+Wed Dec 10 02:21:42 2025   ASA0   ciscoasa(config)#route outside 0.0.0.0 0.0.0.0 172.16.0.197
+Fri Dec 12 23:38:31 2025   Mishref   Router>en
+Fri Dec 12 23:38:37 2025   Mishref   Router#int fa 0/0
+Fri Dec 12 23:38:40 2025   Mishref   Router#conf t
+Fri Dec 12 23:38:42 2025   Mishref   Router(config)#int fa 0/0
+Fri Dec 12 23:38:58 2025   Mishref   Router(config-if)#ip add 172.16.0.129 255.255.255.224
+Fri Dec 12 23:39:01 2025   Mishref   Router(config-if)#no shut
+Fri Dec 12 23:39:06 2025   Mishref   Router(config-if)#ex
+Fri Dec 12 23:39:15 2025   Mishref   Router(config)#int s2/0
+Fri Dec 12 23:39:26 2025   Mishref   Router(config-if)#ip add 172.16.0.162 255.255.255.252
+Fri Dec 12 23:39:28 2025   Mishref   Router(config-if)#no shut
+Fri Dec 12 23:39:37 2025   Mishref   Router(config-if)#no shut
+Fri Dec 12 23:39:45 2025   Mishref   Router(config-if)#exit
+Fri Dec 12 23:39:45 2025   Mishref   Router(config)#interface Serial2/0
+Fri Dec 12 23:40:03 2025   Hawally   Router>enable
+Fri Dec 12 23:40:03 2025   Hawally   Router#configure terminal
+Fri Dec 12 23:40:03 2025   Hawally   Router(config)#interface Serial3/0
+Fri Dec 12 23:40:04 2025   Hawally   Router(config-if)#no shutdown
+Fri Dec 12 23:40:07 2025   Hawally   Router(config-if)#clock rate 1200
+Fri Dec 12 23:41:04 2025   Hawally   Router(config-if)#exit
+Fri Dec 12 23:41:04 2025   Hawally   Router(config)#interface Serial3/0
+Fri Dec 12 23:41:09 2025   Hawally   Router(config-if)#ip address 172.16.0.161 255.255.0.0
+Fri Dec 12 23:41:11 2025   Hawally   Router(config-if)#ip address 172.16.0.161 255.255.0.0
+Fri Dec 12 23:41:14 2025   Hawally   Router(config-if)#ip address 172.16.0.161 255.255.255.252
+Fri Dec 12 23:41:17 2025   Hawally   Router(config-if)#ip address 172.16.0.161 255.255.255.252
+Fri Dec 12 23:41:49 2025   Mishref   Router(config-if)#exit
+Fri Dec 12 23:41:49 2025   Mishref   Router(config)#interface Serial2/0
+Fri Dec 12 23:41:53 2025   Hawally   Router(config-if)#exit
+Fri Dec 12 23:41:53 2025   Hawally   Router(config)#interface Serial3/0
+Fri Dec 12 23:42:20 2025   Mishref   Router(config-if)#exit
+Fri Dec 12 23:42:20 2025   Mishref   Router(config)#interface FastEthernet0/0
+Fri Dec 12 23:43:18 2025   Mishref   Router(config-if)#exit
+Fri Dec 12 23:43:18 2025   Mishref   Router(config)#interface FastEthernet0/0
+Fri Dec 12 23:43:36 2025   Hawally   Router(config-if)#exit
+Fri Dec 12 23:43:36 2025   Hawally   Router(config)#interface Serial2/0
+Fri Dec 12 23:43:37 2025   Hawally   Router(config-if)#exit
+Fri Dec 12 23:43:37 2025   Hawally   Router(config)#interface Serial3/0
+Fri Dec 12 23:48:22 2025   Mishref   Router#conf t
+Fri Dec 12 23:48:28 2025   Mishref   Router(config)#router ospf 1
+Fri Dec 12 23:48:41 2025   Mishref   Router(config-router)#net 172.16.0.128 0.0.0.31 area 0
+Fri Dec 12 23:48:50 2025   Mishref   Router(config-router)#net 172.16.0.160 0.0.0.3 area 0
+Fri Dec 12 23:48:57 2025   Mishref   Router#sh ip b
+Fri Dec 12 23:49:02 2025   Mishref   Router#sh ip rout
+Fri Dec 12 23:49:17 2025   Hawally   Router#conf t
+Fri Dec 12 23:49:24 2025   Hawally   Router(config)#router ospf 1
+Fri Dec 12 23:49:36 2025   Hawally   Router(config-router)#net 172.16.0.160 0.0.0.3 area 0
+Fri Dec 12 23:49:50 2025   Hawally   Router#sh ip route
+Fri Dec 12 23:50:07 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:22:16 2025   Farwaniya   Router>en
+Sat Dec 13 00:22:18 2025   Farwaniya   Router#conf t
+Sat Dec 13 00:22:27 2025   Farwaniya   Router(config)#int fa 0/0
+Sat Dec 13 00:22:37 2025   Farwaniya   Router(config-if)#ip add 192.168.1.1 255.255.255.0
+Sat Dec 13 00:22:39 2025   Farwaniya   Router(config-if)#no shut
+Sat Dec 13 00:22:42 2025   Farwaniya   Router(config-if)#ex
+Sat Dec 13 00:22:46 2025   Farwaniya   Router(config)#int s 2/0
+Sat Dec 13 00:22:57 2025   Farwaniya   Router(config-if)#ip add 10.0.0.2
+Sat Dec 13 00:24:11 2025   Hawally   Router>enable
+Sat Dec 13 00:24:11 2025   Hawally   Router#configure terminal
+Sat Dec 13 00:24:11 2025   Hawally   Router(config)#interface Serial2/0
+Sat Dec 13 00:24:13 2025   Hawally   Router(config-if)#exit
+Sat Dec 13 00:24:13 2025   Hawally   Router(config)#interface Serial3/0
+Sat Dec 13 00:25:15 2025   Farwaniya   Router(config-if)#ip add 192.168.2.2 255.255.255.0
+Sat Dec 13 00:25:17 2025   Farwaniya   Router(config-if)#no shut
+Sat Dec 13 00:25:27 2025   Farwaniya   Router#conf t
+Sat Dec 13 00:25:31 2025   Farwaniya   Router(config)#router ospf 1
+Sat Dec 13 00:25:46 2025   Farwaniya   Router(config-router)#net 192.168.1.0 0.0.0.255 area 0
+Sat Dec 13 00:25:53 2025   Farwaniya   Router(config-router)#net 192.168.2.0 0.0.0.255 area 0
+Sat Dec 13 00:25:56 2025   Farwaniya   Router(config-router)#ex
+Sat Dec 13 00:25:56 2025   Farwaniya   Router(config)#ex
+Sat Dec 13 00:25:57 2025   Farwaniya   Router#e
+Sat Dec 13 00:26:06 2025   Hawally   Router(config-if)#ex
+Sat Dec 13 00:26:09 2025   Hawally   Router(config)#int s 7/0
+Sat Dec 13 00:26:16 2025   Hawally   Router(config-if)#ip add 192.168.2.0
+Sat Dec 13 00:26:34 2025   Hawally   Router(config-if)#ip add 192.168.2.1 255.255.255.0
+Sat Dec 13 00:26:35 2025   Hawally   Router(config-if)#ex
+Sat Dec 13 00:26:40 2025   Hawally   Router(config)#router ospf 1
+Sat Dec 13 00:26:53 2025   Hawally   Router(config-router)#net 192.168.2.0 0.0.0.255 area 0
+Sat Dec 13 00:27:00 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:27:09 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:27:28 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:27:56 2025   Farwaniya   Router#configure terminal
+Sat Dec 13 00:27:56 2025   Farwaniya   Router(config)#interface Serial2/0
+Sat Dec 13 00:27:58 2025   Farwaniya   Router(config-if)#clock rate 1200
+Sat Dec 13 00:28:03 2025   Hawally   Router#configure terminal
+Sat Dec 13 00:28:03 2025   Hawally   Router(config)#interface Serial7/0
+Sat Dec 13 00:28:07 2025   Hawally   Router(config-if)#clock rate 1200
+Sat Dec 13 00:28:08 2025   Hawally   Router(config-if)#no shutdown
+Sat Dec 13 00:28:14 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:28:20 2025   Hawally   Router#configure terminal
+Sat Dec 13 00:28:22 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:30:43 2025   Farwaniya   Router(config-if)#exit
+Sat Dec 13 00:30:43 2025   Farwaniya   Router(config)#interface FastEthernet0/0
+Sat Dec 13 00:36:06 2025   Mishreb   Router>en
+Sat Dec 13 00:36:08 2025   Mishreb   Router#conf t
+Sat Dec 13 00:36:10 2025   Mishreb   Router(config)#int fa 0/0
+Sat Dec 13 00:36:19 2025   Mishreb   Router(config-if)#ip add 192.168.3.1 255.255.255.0
+Sat Dec 13 00:36:22 2025   Mishreb   Router(config-if)#no shut
+Sat Dec 13 00:36:26 2025   Mishreb   Router(config-if)#ex
+Sat Dec 13 00:36:34 2025   Mishreb   Router(config)#int s 2/0
+Sat Dec 13 00:36:51 2025   Mishreb   Router(config-if)#ip add 192.168.4.2 255.255.255.0
+Sat Dec 13 00:36:54 2025   Mishreb   Router(config-if)#no shut
+Sat Dec 13 00:36:57 2025   Mishreb   Router(config-if)#ex
+Sat Dec 13 00:37:05 2025   Mishreb   Router(config)#router ospf 1
+Sat Dec 13 00:37:14 2025   Mishreb   Router(config-router)#net 192.168.3.0 0.0.0.255 area 0
+Sat Dec 13 00:37:20 2025   Mishreb   Router(config-router)#net 192.168.4.0 0.0.0.255 area 0
+Sat Dec 13 00:38:54 2025   Hawally   Router>en
+Sat Dec 13 00:39:05 2025   Hawally   Router#conf t
+Sat Dec 13 00:39:17 2025   Hawally   Router(config)#ip add 192.168.4.1 255.255.255.0
+Sat Dec 13 00:39:25 2025   Hawally   Router(config)#int s 2/0
+Sat Dec 13 00:39:26 2025   Hawally   Router(config-if)#ip add 192.168.4.1 255.255.255.0
+Sat Dec 13 00:39:31 2025   Hawally   Router(config-if)#no shut
+Sat Dec 13 00:39:33 2025   Hawally   Router(config-if)#ex
+Sat Dec 13 00:39:36 2025   Hawally   Router(config)#router osfp 1
+Sat Dec 13 00:39:38 2025   Hawally   Router(config)#router osfp 1
+Sat Dec 13 00:39:43 2025   Hawally   Router(config)#router ospf 1
+Sat Dec 13 00:39:55 2025   Hawally   Router(config-router)#net 192.168.4.0 0.0.0.255 area 0
+Sat Dec 13 00:39:56 2025   Hawally   Router(config-router)#ex
+Sat Dec 13 00:40:00 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:40:04 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:42:32 2025   Salmiya   Router>en
+Sat Dec 13 00:42:43 2025   Salmiya   Router#int s 2/0
+Sat Dec 13 00:42:46 2025   Salmiya   Router#conf t
+Sat Dec 13 00:42:50 2025   Salmiya   Router(config)#int s 2/0+
+Sat Dec 13 00:42:52 2025   Salmiya   Router(config)#int s 2/0
+Sat Dec 13 00:43:01 2025   Salmiya   Router(config-if)#ip add 192.168.7.2 255.255.255.0
+Sat Dec 13 00:43:02 2025   Salmiya   Router(config-if)#no shut
+Sat Dec 13 00:43:05 2025   Salmiya   Router(config-if)#ex
+Sat Dec 13 00:43:18 2025   Salmiya   Router(config)#int fa 0/0
+Sat Dec 13 00:43:27 2025   Salmiya   Router(config-if)#ip add 192.168.5.1 255.255.255.0
+Sat Dec 13 00:43:30 2025   Salmiya   Router(config-if)#no shut
+Sat Dec 13 00:43:34 2025   Salmiya   Router(config-if)#ex
+Sat Dec 13 00:43:41 2025   Salmiya   Router(config)#router ospf 1
+Sat Dec 13 00:43:56 2025   Salmiya   Router(config-router)#net 192.168.7.0 0.0.0.255 area 0
+Sat Dec 13 00:44:01 2025   Salmiya   Router(config-router)#net 192.168.5.0 0.0.0.255 area 0
+Sat Dec 13 00:44:06 2025   Salmiya   Router(config-router)#ex
+Sat Dec 13 00:44:07 2025   Salmiya   Router(config)#ex
+Sat Dec 13 00:44:49 2025   Salmiya   Router#conf t
+Sat Dec 13 00:44:57 2025   Salmiya   Router(config)#ip route 192.168.6.0 255.255.255.0 192.168.5.2
+Sat Dec 13 00:45:11 2025   Hawally   Router#conf 
+Sat Dec 13 00:45:16 2025   Hawally   Router(config)#int s 6/0
+Sat Dec 13 00:45:25 2025   Hawally   Router(config-if)#ip add 192.168.7.1 255.255.255.0
+Sat Dec 13 00:45:27 2025   Hawally   Router(config-if)#ex
+Sat Dec 13 00:45:36 2025   Hawally   Router(config)#interface Serial6/0
+Sat Dec 13 00:45:37 2025   Hawally   Router(config-if)#no shutdown
+Sat Dec 13 00:45:41 2025   Hawally   Router(config-if)#ex
+Sat Dec 13 00:45:45 2025   Hawally   Router(config)#router ospf 1
+Sat Dec 13 00:45:52 2025   Hawally   Router(config-router)#ex
+Sat Dec 13 00:46:07 2025   Hawally   Router(config)#net 192.168.7.0 0.0.0.255 area 0
+Sat Dec 13 00:46:17 2025   Hawally   Router(config)#router ospf 1
+Sat Dec 13 00:46:19 2025   Hawally   Router(config-router)#net 192.168.7.0 0.0.0.255 area 0
+Sat Dec 13 00:46:51 2025   ASA0   ciscoasa>en
+Sat Dec 13 00:46:55 2025   ASA0   ciscoasa#conf t
+Sat Dec 13 00:47:05 2025   ASA0   ciscoasa(config)#int gig 1/1
+Sat Dec 13 00:47:16 2025   ASA0   ciscoasa(config-if)#ip add 192.168.5.2 255.255.255.0
+Sat Dec 13 00:47:20 2025   ASA0   ciscoasa(config-if)#no shut
+Sat Dec 13 00:47:28 2025   ASA0   ciscoasa(config-if)#ex
+Sat Dec 13 00:47:32 2025   ASA0   ciscoasa(config)#int gig 1/2
+Sat Dec 13 00:47:38 2025   ASA0   ciscoasa(config-if)#nameif inside
+Sat Dec 13 00:47:45 2025   ASA0   ciscoasa(config-if)#security-level 100
+Sat Dec 13 00:47:55 2025   ASA0   ciscoasa(config-if)#ip add 192.168.6.1 255.255.255.0
+Sat Dec 13 00:47:56 2025   ASA0   ciscoasa(config-if)#no shut
+Sat Dec 13 00:48:01 2025   ASA0   ciscoasa(config-if)#ex
+Sat Dec 13 00:48:15 2025   ASA0   ciscoasa(config)#policy-map global_policy
+Sat Dec 13 00:48:15 2025   ASA0   ciscoasa(config-pmap)#class inspection_default
+Sat Dec 13 00:48:15 2025   ASA0   ciscoasa(config-pmap-c)#inspect icmp
+Sat Dec 13 00:48:15 2025   ASA0   ciscoasa(config-pmap-c)#exit
+Sat Dec 13 00:48:15 2025   ASA0   ciscoasa(config)#service-policy global_policy global
+Sat Dec 13 00:48:23 2025   ASA0   ciscoasa(config)#route outside 0.0.0.0 0.0.0.0 192.168.5.1
+Sat Dec 13 00:54:53 2025   Hawally   Router#sh ip route
+Sat Dec 13 00:56:46 2025   Mishref   Router>en
+Sat Dec 13 00:56:51 2025   Mishref   Router#sh ip route
+Sat Dec 13 01:01:19 2025   Salmiya   Router>en
+Sat Dec 13 01:01:21 2025   Salmiya   Router#conf t
+Sat Dec 13 01:01:23 2025   Salmiya   Router(config)#ip route 192.168.6.0 255.255.255.0 192.168.5.2
+Sat Dec 13 01:04:18 2025   Salmiya   Router(config)#router ospf 1
+Sat Dec 13 01:04:28 2025   Salmiya   Router(config-router)#redistribute static subnets
+Sat Dec 13 01:04:44 2025   Hawally   Router>en
+Sat Dec 13 01:04:46 2025   Hawally   Router#sh ip route
+Sat Dec 13 01:06:08 2025   Hawally   Router#conf t
+Sat Dec 13 01:06:10 2025   Hawally   Router(config)#ip route 192.168.6.0 255.255.255.0 192.168.7.2
+Sat Dec 13 01:06:37 2025   ASA0   ciscoasa>access-list ALLOW_PING extended permit ip any any
+Sat Dec 13 01:06:40 2025   ASA0   ciscoasa>access-group ALLOW_PING in interface outside
+Sat Dec 13 01:06:41 2025   ASA0   ciscoasa>en
+Sat Dec 13 01:06:43 2025   ASA0   ciscoasa#conf t
+Sat Dec 13 01:06:45 2025   ASA0   ciscoasa(config)#access-list ALLOW_PING extended permit ip any any
+Sat Dec 13 01:06:46 2025   ASA0   ciscoasa(config)#access-group ALLOW_PING in interface outside
+Sat Dec 13 01:19:16 2025   Switch3   Switch>en
+Sat Dec 13 01:19:27 2025   Switch3   Switch#conf t
+Sat Dec 13 01:19:31 2025   Switch3   Switch(config)#vlan 10
+Sat Dec 13 01:19:35 2025   Switch3   Switch(config-vlan)#name staff
+Sat Dec 13 01:19:36 2025   Switch3   Switch(config-vlan)#ex
+Sat Dec 13 01:19:38 2025   Switch3   Switch(config)#vlan 20
+Sat Dec 13 01:19:43 2025   Switch3   Switch(config-vlan)#name guest
+Sat Dec 13 01:19:44 2025   Switch3   Switch(config-vlan)#ex
+Sat Dec 13 01:19:58 2025   Switch3   Switch(config)#int fa 2/1
+Sat Dec 13 01:20:04 2025   Switch3   Switch(config-if)#switch mode access
+Sat Dec 13 01:20:10 2025   Switch3   Switch(config-if)#switch access vlan 10
+Sat Dec 13 01:20:14 2025   Switch3   Switch(config-if)#ex
+Sat Dec 13 01:20:23 2025   Switch3   Switch(config)#int fa 1/1
+Sat Dec 13 01:20:27 2025   Switch3   Switch(config-if)#switch mode access
+Sat Dec 13 01:20:33 2025   Switch3   Switch(config-if)#switch access vlan 20
+Sat Dec 13 01:21:12 2025   Switch3   Switch(config-if)#ex
+Sat Dec 13 01:21:31 2025   Switch3   Switch(config)#int fa 0/1
+Sat Dec 13 01:21:37 2025   Switch3   Switch(config-if)#switch mode trunk
+Sat Dec 13 01:21:51 2025   Mishref   Router>en
+Sat Dec 13 01:22:03 2025   Mishref   Router#int fa 0/0
+Sat Dec 13 01:22:05 2025   Mishref   Router#conf t
+Sat Dec 13 01:22:09 2025   Mishref   Router(config)#int fa 0/0
+Sat Dec 13 01:22:27 2025   Mishref   Router(config-if)#ex
+Sat Dec 13 01:22:29 2025   Mishref   Router(config)#interface FastEthernet0/0.10
+Sat Dec 13 01:22:29 2025   Mishref   Router(config-subif)#encapsulation dot1Q 10
+Sat Dec 13 01:22:29 2025   Mishref   Router(config-subif)#ip address 172.16.0.129 255.255.255.240
+Sat Dec 13 01:22:34 2025   Mishref   Router(config-subif)#exit
+Sat Dec 13 01:24:01 2025   Mishref   Router(config)#interface FastEthernet0/0
+Sat Dec 13 01:24:01 2025   Mishref   Router(config-if)#no ip address
+Sat Dec 13 01:24:01 2025   Mishref   Router(config-if)#no shutdown
+Sat Dec 13 01:24:09 2025   Mishref   Router(config-if)#exit
+Sat Dec 13 01:24:22 2025   Mishref   Router(config)#interface FastEthernet0/0.10
+Sat Dec 13 01:24:22 2025   Mishref   Router(config-subif)#encapsulation dot1Q 10
+Sat Dec 13 01:24:22 2025   Mishref   Router(config-subif)#ip address 172.16.0.129 255.255.255.240
+Sat Dec 13 01:24:22 2025   Mishref   Router(config-subif)#exit
+Sat Dec 13 01:24:32 2025   Mishref   Router(config)#interface FastEthernet0/0.20
+Sat Dec 13 01:24:32 2025   Mishref   Router(config-subif)#encapsulation dot1Q 20
+Sat Dec 13 01:24:32 2025   Mishref   Router(config-subif)#ip address 172.16.0.145 255.255.255.240
+Sat Dec 13 01:24:34 2025   Mishref   Router(config-subif)#exit
+Sat Dec 13 01:29:52 2025   Switch3   Switch>en
+Sat Dec 13 01:29:53 2025   Switch3   Switch#conf t
+Sat Dec 13 01:30:00 2025   Switch3   Switch(config)#interface FastEthernet0/1
+Sat Dec 13 01:30:05 2025   Switch3   Switch(config-if)#switchport mode trunk
+Sat Dec 13 01:30:09 2025   Switch3   Switch(config-if)#no shut
+Sat Dec 13 01:36:07 2025   Salmiya   Router>en
+Sat Dec 13 01:36:24 2025   Salmiya   Router#conf t
+Sat Dec 13 01:36:27 2025   Salmiya   Router(config)#access-list 100 deny ip 192.168.1.0 0.0.0.255 host 192.168.6.10
+Sat Dec 13 01:36:34 2025   Salmiya   Router(config)#access-list 100 permit ip any any
+Sat Dec 13 01:36:44 2025   Salmiya   Router(config)#interface Serial2/0
+Sat Dec 13 01:36:49 2025   Salmiya   Router(config-if)#ip access-group 100 in
+Sat Dec 13 01:58:17 2025   Switch3   Switch>en
+Sat Dec 13 01:58:28 2025   Switch3   Switch#sh vlan b
+Sat Dec 13 01:59:20 2025   Switch3   Switch#conf y
+Sat Dec 13 01:59:22 2025   Switch3   Switch#conf 
+Sat Dec 13 01:59:24 2025   Switch3   Switch(config)#interface FastEthernet0/1
+Sat Dec 13 01:59:24 2025   Switch3   Switch(config-if)#switchport trunk encapsulation dot1q
+Sat Dec 13 01:59:24 2025   Switch3   Switch(config-if)#switchport mode trunk
+Sat Dec 13 01:59:31 2025   Switch3   Switch(config-if)#switchport trunk encapsulation dot1q
+Sat Dec 13 01:59:36 2025   Switch3   Switch(config-if)#switchport mode trunk
+Sat Dec 13 01:59:50 2025   Mishref   Router>en
+Sat Dec 13 01:59:57 2025   Mishref   Router#conf
+Sat Dec 13 01:59:59 2025   Mishref   Router(config)#interface FastEthernet0/0.20
+Sat Dec 13 01:59:59 2025   Mishref   Router(config-subif)#encapsulation dot1Q 20
+Sat Dec 13 01:59:59 2025   Mishref   Router(config-subif)#ip address 172.16.0.145 255.255.255.240
+Sat Dec 13 02:00:00 2025   Mishref   Router(config-subif)#exit
+Sat Dec 13 02:00:58 2025   Switch3   Switch(config-if)#interface FastEthernet0/1
+Sat Dec 13 02:01:02 2025   Switch3   Switch#sh ip int b
+Sat Dec 13 02:01:24 2025   Switch3   Switch#sh vlan b
+Sat Dec 13 02:06:46 2025   Mishref   Router(config)#interface FastEthernet0/0
+Sat Dec 13 02:06:47 2025   Mishref   Router(config-if)#exit
+Sat Dec 13 02:06:47 2025   Mishref   Router(config)#interface FastEthernet1/0
+Sat Dec 13 02:06:48 2025   Mishref   Router(config-if)#exit
+Sat Dec 13 02:06:48 2025   Mishref   Router(config)#interface Serial2/0
+Sat Dec 13 02:07:00 2025   Mishref   Router(config-if)#exit
+Sat Dec 13 02:07:00 2025   Mishref   Router(config)#interface FastEthernet0/0
+Sat Dec 13 02:07:35 2025   Mishref   Router(config)#interface FastEthernet0/0
+Sat Dec 13 02:07:50 2025   Mishref   Router(config-if)#no ip address
+Sat Dec 13 02:07:53 2025   Mishref   Router(config-if)#exit
+Sat Dec 13 02:07:53 2025   Mishref   Router(config)#interface FastEthernet1/0
+Sat Dec 13 02:07:54 2025   Mishref   Router(config-if)#exit
+Sat Dec 13 02:07:54 2025   Mishref   Router(config)#interface FastEthernet1/0
+Sun Dec 14 18:21:29 2025   ASA0   ciscoasa>enable
+Sun Dec 14 18:21:29 2025   ASA0   ciscoasa#configure terminal
+Sun Dec 14 18:21:29 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Sun Dec 14 18:21:32 2025   ASA0   ciscoasa(config-if)#ip address 192.168.5.2 255.255.255.0
+Sun Dec 14 18:21:38 2025   ASA0   ciscoasa(config-if)#ip address 192.168.5.2 255.255.255.0
+Sun Dec 14 18:22:07 2025   ASA0   ciscoasa#configure terminal
+Sun Dec 14 18:22:07 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/2
+Sun Dec 14 18:22:20 2025   Salmiya   Router>enable
+Sun Dec 14 18:22:20 2025   Salmiya   Router#configure terminal
+Sun Dec 14 18:22:20 2025   Salmiya   Router(config)#interface FastEthernet0/0
+Sun Dec 14 18:22:22 2025   Salmiya   Router(config-if)#ip address 192.168.5.1 255.255.255.0
+Sun Dec 14 18:22:26 2025   ASA0   ciscoasa(config-if)#exit
+Sun Dec 14 18:22:26 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Sun Dec 14 18:22:34 2025   ASA0   ciscoasa#configure terminal
+Sun Dec 14 18:22:34 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Sun Dec 14 18:37:09 2025   ASA0   ciscoasa#configure terminal
+Sun Dec 14 18:37:09 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Sun Dec 14 18:38:29 2025   ASA0   ciscoasa(config-if)#exit
+Sun Dec 14 18:38:29 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/2
+Sun Dec 14 18:38:32 2025   ASA0   ciscoasa(config-if)#ip address 192.168.6.1 255.255.255.0
+Sun Dec 14 18:38:45 2025   ASA0   ciscoasa(config-if)#exit
+Sun Dec 14 18:38:45 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Sun Dec 14 18:38:48 2025   ASA0   ciscoasa(config-if)#ip address 192.168.5.2 255.255.255.0
+Sun Dec 14 18:38:55 2025   Salmiya   Router>enable
+Sun Dec 14 18:38:55 2025   Salmiya   Router#configure terminal
+Sun Dec 14 18:38:55 2025   Salmiya   Router(config)#interface FastEthernet0/0
+Sun Dec 14 18:38:59 2025   Salmiya   Router(config-if)#ip address 192.168.5.1 255.255.255.0
+Sun Dec 14 18:39:24 2025   Salmiya   Router#sh ip route
+Sun Dec 14 22:42:03 2025   Switch0   Switch>en
+Sun Dec 14 22:42:06 2025   Switch0   Switch#sh vlan b
+Sun Dec 14 22:42:14 2025   Switch1   Switch>en
+Sun Dec 14 22:42:16 2025   Switch1   Switch#sh vlan b
+Sun Dec 14 22:47:21 2025   Switch3   Switch>en
+Sun Dec 14 22:47:23 2025   Switch3   Switch#conf t
+Sun Dec 14 22:47:27 2025   Switch3   Switch#sh vlan b
+Sun Dec 14 22:48:07 2025   Switch0   Switch#conf t
+Sun Dec 14 22:48:13 2025   Switch0   Switch(config)#no vlan 10
+Sun Dec 14 22:48:20 2025   Switch0   Switch(config)#no vlan 20
+Sun Dec 14 22:48:23 2025   Switch0   Switch#sh vlan b
+Sun Dec 14 22:48:32 2025   Switch3   Switch#sh vlan b
+Sun Dec 14 22:50:06 2025   Switch3   Switch#conf t
+Sun Dec 14 22:50:17 2025   Switch3   Switch(config)#int fa 2/1
+Sun Dec 14 22:50:23 2025   Switch3   Switch(config-if)#switch mode access
+Sun Dec 14 22:50:33 2025   Switch3   Switch(config-if)#switch access vlan 10
+Sun Dec 14 22:50:45 2025   Switch3   Switch(config-if)#ex
+Sun Dec 14 22:50:49 2025   Switch3   Switch(config)#int fa 1/1
+Sun Dec 14 22:50:54 2025   Switch3   Switch(config-if)#switch mode access
+Sun Dec 14 22:50:59 2025   Switch3   Switch(config-if)#switch access vlan 20
+Sun Dec 14 22:51:04 2025   Switch3   Switch(config-if)#ex
+Sun Dec 14 22:51:09 2025   Switch3   Switch(config)#int fa 0/1
+Sun Dec 14 22:51:14 2025   Switch3   Switch(config-if)#switch mode trunk
+Sun Dec 14 22:51:17 2025   Switch3   Switch(config-if)#no shut
+Sun Dec 14 22:51:48 2025   Mishref   Router>en
+Sun Dec 14 22:51:49 2025   Mishref   Router#conf t
+Sun Dec 14 22:51:56 2025   Mishref   Router(config)#int fa 0/0
+Sun Dec 14 22:52:00 2025   Mishref   Router(config-if)#no ip add
+Sun Dec 14 22:52:05 2025   Mishref   Router(config-if)#no shut
+Sun Dec 14 22:52:09 2025   Mishref   Router(config-if)#ex
+Sun Dec 14 22:52:19 2025   Mishref   Router(config)#int fa 0/0.10
+Sun Dec 14 22:52:25 2025   Mishref   Router(config-subif)#encap dot11 10
+Sun Dec 14 22:52:30 2025   Mishref   Router(config-subif)#encap dot1q 10
+Sun Dec 14 22:52:35 2025   Mishref   Router(config-subif)#ip address 172.16.0.129 255.255.255.240
+Sun Dec 14 22:52:38 2025   Mishref   Router(config-subif)#ex
+Sun Dec 14 22:52:44 2025   Mishref   Router(config)#int fa 0/0.20
+Sun Dec 14 22:52:49 2025   Mishref   Router(config-subif)#encap dot1q 20
+Sun Dec 14 22:52:54 2025   Mishref   Router(config-subif)#ip address 172.16.0.145 255.255.255.240
+Sun Dec 14 22:52:58 2025   Mishref   Router(config-subif)#ex
+Sun Dec 14 22:53:03 2025   Mishref   Router(config)#router ospf 1
+Sun Dec 14 22:53:10 2025   Mishref   Router(config-router)#network 172.16.0.128 0.0.0.15 area 0
+Sun Dec 14 22:53:12 2025   Mishref   Router(config-router)#network 172.16.0.144 0.0.0.15 area 0
+Mon Dec 15 00:11:57 2025   ASA0   ciscoasa>en
+Mon Dec 15 00:12:32 2025   ASA0   ciscoasa#conft
+Mon Dec 15 00:12:34 2025   ASA0   ciscoasa#conf t
+Mon Dec 15 00:14:10 2025   ASA0   ciscoasa(config)#no access-list 100
+Mon Dec 15 00:15:45 2025   Salmiya   Router>en
+Mon Dec 15 00:15:53 2025   Salmiya   Router#conf
+Mon Dec 15 00:15:58 2025   Salmiya   Router(config)#no access-list 100
+Mon Dec 15 00:16:51 2025   Salmiya   Router(config)#access-list 100 deny ip host 192.168.1.10 host 192.168.6.10
+Mon Dec 15 00:16:56 2025   Salmiya   Router(config)#access-list 100 permit ip any any
+Tue Dec 16 21:32:36 2025   Farwaniya   Router>enable
+Tue Dec 16 21:32:36 2025   Farwaniya   Router#configure terminal
+Tue Dec 16 21:32:36 2025   Farwaniya   Router(config)#interface FastEthernet0/0
+Tue Dec 16 21:32:41 2025   Farwaniya   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Tue Dec 16 21:32:43 2025   Farwaniya   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Tue Dec 16 21:32:56 2025   Mishreb   Router>enable
+Tue Dec 16 21:32:56 2025   Mishreb   Router#configure terminal
+Tue Dec 16 21:32:56 2025   Mishreb   Router(config)#interface FastEthernet0/0
+Tue Dec 16 21:32:59 2025   Mishreb   Router(config-if)#ip address 192.168.3.1 255.255.255.0
+Tue Dec 16 21:33:21 2025   ASA0   ciscoasa>enable
+Tue Dec 16 21:33:21 2025   ASA0   ciscoasa#configure terminal
+Tue Dec 16 21:33:21 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Tue Dec 16 21:33:42 2025   Mishref   Router>enable
+Tue Dec 16 21:33:42 2025   Mishref   Router#configure terminal
+Tue Dec 16 21:33:42 2025   Mishref   Router(config)#interface FastEthernet0/0
+Tue Dec 16 21:33:44 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:33:44 2025   Mishref   Router(config)#interface FastEthernet1/0
+Tue Dec 16 21:34:35 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:34:35 2025   Mishref   Router(config)#interface FastEthernet0/0
+Tue Dec 16 21:34:46 2025   Mishref   Router(config-if)#ip address  
+Tue Dec 16 21:34:58 2025   Farwaniya   Router(config-if)#exit
+Tue Dec 16 21:34:58 2025   Farwaniya   Router(config)#interface Serial2/0
+Tue Dec 16 21:35:02 2025   Farwaniya   Router(config-if)#ip address 192.168.2.2 255.255.255.0
+Tue Dec 16 21:35:07 2025   Hawally   Router>enable
+Tue Dec 16 21:35:07 2025   Hawally   Router#configure terminal
+Tue Dec 16 21:35:07 2025   Hawally   Router(config)#interface Serial2/0
+Tue Dec 16 21:35:16 2025   Hawally   Router(config-if)#exit
+Tue Dec 16 21:35:16 2025   Hawally   Router(config)#interface Serial7/0
+Tue Dec 16 21:35:19 2025   Hawally   Router(config-if)#ip address 192.168.2.1 255.255.255.0
+Tue Dec 16 21:35:33 2025   Mishreb   Router(config-if)#exit
+Tue Dec 16 21:35:33 2025   Mishreb   Router(config)#interface Serial2/0
+Tue Dec 16 21:35:36 2025   Mishreb   Router(config-if)#ip address 192.168.4.2 255.255.255.0
+Tue Dec 16 21:35:39 2025   Hawally   Router(config-if)#exit
+Tue Dec 16 21:35:39 2025   Hawally   Router(config)#interface Serial2/0
+Tue Dec 16 21:35:44 2025   Hawally   Router(config-if)#ip address 192.168.4.1 255.255.255.0
+Tue Dec 16 21:35:50 2025   Hawally   Router(config-if)#exit
+Tue Dec 16 21:35:50 2025   Hawally   Router(config)#interface Serial6/0
+Tue Dec 16 21:35:54 2025   Hawally   Router(config-if)#ip address 192.168.7.1 255.255.255.0
+Tue Dec 16 21:35:59 2025   Salmiya   Router>enable
+Tue Dec 16 21:35:59 2025   Salmiya   Router#configure terminal
+Tue Dec 16 21:35:59 2025   Salmiya   Router(config)#interface Serial2/0
+Tue Dec 16 21:36:03 2025   Salmiya   Router(config-if)#ip address 192.168.7.2 255.255.255.0
+Tue Dec 16 21:36:10 2025   Hawally   Router(config-if)#exit
+Tue Dec 16 21:36:10 2025   Hawally   Router(config)#interface Serial3/0
+Tue Dec 16 21:36:14 2025   Hawally   Router(config-if)#ip address 172.16.0.161 255.255.255.252
+Tue Dec 16 21:36:18 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:36:18 2025   Mishref   Router(config)#interface Serial2/0
+Tue Dec 16 21:36:21 2025   Mishref   Router(config-if)#ip address 172.16.0.162 255.255.255.252
+Tue Dec 16 21:37:02 2025   Farwaniya   Router(config-if)#exit
+Tue Dec 16 21:37:02 2025   Farwaniya   Router(config)#interface Serial2/0
+Tue Dec 16 21:37:06 2025   Farwaniya   Router(config-if)#ip address 192.168.2.2 255.255.255.0
+Tue Dec 16 21:37:12 2025   Hawally   Router(config-if)#exit
+Tue Dec 16 21:37:12 2025   Hawally   Router(config)#interface Serial7/0
+Tue Dec 16 21:37:14 2025   Hawally   Router(config-if)#ip address 192.168.2.1 255.255.255.0
+Tue Dec 16 21:42:23 2025   Mishreb   Router(config-if)#exit
+Tue Dec 16 21:42:23 2025   Mishreb   Router(config)#interface FastEthernet0/0
+Tue Dec 16 21:42:27 2025   Mishreb   Router(config-if)#ip address 192.168.3.1 255.255.255.0
+Tue Dec 16 21:42:38 2025   Farwaniya   Router(config-if)#exit
+Tue Dec 16 21:42:38 2025   Farwaniya   Router(config)#interface FastEthernet0/0
+Tue Dec 16 21:49:18 2025   Mishref   Router>enable
+Tue Dec 16 21:49:18 2025   Mishref   Router#configure terminal
+Tue Dec 16 21:49:18 2025   Mishref   Router(config)#interface FastEthernet0/0
+Tue Dec 16 21:49:19 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:49:19 2025   Mishref   Router(config)#interface FastEthernet1/0
+Tue Dec 16 21:49:20 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:49:20 2025   Mishref   Router(config)#interface Serial3/0
+Tue Dec 16 21:49:21 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:49:21 2025   Mishref   Router(config)#interface Serial2/0
+Tue Dec 16 21:55:02 2025   Mishref   Router(config-if)#ip address 172.16.0.162 255.255.255.252
+Tue Dec 16 21:55:44 2025   Mishref   Router(config-if)#ip address 192.168.0.162 255.255.255.252
+Tue Dec 16 21:55:47 2025   Mishref   Router(config-if)#ip address 192.168.0.162 255.255.255.252
+Tue Dec 16 21:55:53 2025   Mishref   Router(config-if)#ip address 192.168.0.162 255.255.254.0
+Tue Dec 16 21:55:54 2025   Mishref   Router(config-if)#ip address 192.168.0.162 255.255.254.0
+Tue Dec 16 21:56:05 2025   Hawally   Router>enable
+Tue Dec 16 21:56:05 2025   Hawally   Router#configure terminal
+Tue Dec 16 21:56:05 2025   Hawally   Router(config)#interface Serial3/0
+Tue Dec 16 21:56:10 2025   Hawally   Router(config-if)#ip address 192.168.0.161 255.255.255.252
+Tue Dec 16 21:56:13 2025   Hawally   Router(config-if)#ip address 192.168.0.161 255.255.254.0
+Tue Dec 16 21:56:16 2025   Hawally   Router(config-if)#ip address 192.168.0.161 255.255.254.0
+Tue Dec 16 21:57:12 2025   Switch3   Switch>enable
+Tue Dec 16 21:57:12 2025   Switch3   Switch#configure terminal
+Tue Dec 16 21:57:15 2025   Switch3   Switch(config)#no vlan 10
+Tue Dec 16 21:57:17 2025   Switch3   Switch(config)#no vlan 20
+Tue Dec 16 21:57:39 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:57:39 2025   Mishref   Router(config)#interface Serial2/0
+Tue Dec 16 21:58:24 2025   Switch3   Switch>enable
+Tue Dec 16 21:58:24 2025   Switch3   Switch#configure terminal
+Tue Dec 16 21:58:27 2025   Switch3   Switch(config)#vlan 1
+Tue Dec 16 21:58:27 2025   Switch3   Switch(config-vlan)#name default
+Tue Dec 16 21:59:03 2025   Mishref   Router>enable
+Tue Dec 16 21:59:03 2025   Mishref   Router#configure terminal
+Tue Dec 16 21:59:03 2025   Mishref   Router(config)#interface FastEthernet0/0
+Tue Dec 16 21:59:25 2025   Mishref   Router(config-if)#no ip address
+Tue Dec 16 21:59:34 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:59:34 2025   Mishref   Router(config)#interface Serial7/0
+Tue Dec 16 21:59:35 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:59:35 2025   Mishref   Router(config)#interface FastEthernet5/0
+Tue Dec 16 21:59:36 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:59:36 2025   Mishref   Router(config)#interface Serial6/0
+Tue Dec 16 21:59:37 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:59:37 2025   Mishref   Router(config)#interface Serial3/0
+Tue Dec 16 21:59:39 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 21:59:39 2025   Mishref   Router(config)#interface Serial2/0
+Tue Dec 16 21:59:46 2025   Mishref   Router#conf t
+Tue Dec 16 21:59:53 2025   Mishref   Router(config)#int fa 0/0
+Tue Dec 16 22:00:04 2025   Mishref   Router(config-if)#ex
+Tue Dec 16 22:00:09 2025   Mishref   Router(config)#int fa 0/0.10
+Tue Dec 16 22:00:20 2025   Mishref   Router(config-subif)#no ip add
+Tue Dec 16 22:00:23 2025   Mishref   Router(config-subif)#ex
+Tue Dec 16 22:00:34 2025   Mishref   Router(config)#int fa 0/0
+Tue Dec 16 22:00:34 2025   Mishref   Router(config-if)#exit
+Tue Dec 16 22:00:34 2025   Mishref   Router(config)#interface Serial2/0
+Tue Dec 16 22:00:49 2025   Mishref   Router#conf t
+Tue Dec 16 22:00:59 2025   Mishref   Router(config)#int fa 0/0.20
+Tue Dec 16 22:01:06 2025   Mishref   Router(config-subif)#no ip add
+Tue Dec 16 22:02:12 2025   Switch3   Switch>en
+Tue Dec 16 22:02:16 2025   Switch3   Switch#sh vlan  b
+Tue Dec 16 22:03:35 2025   Router8   Router>enable
+Tue Dec 16 22:03:35 2025   Router8   Router#configure terminal
+Tue Dec 16 22:03:35 2025   Router8   Router(config)#interface FastEthernet0/0
+Tue Dec 16 22:03:38 2025   Router8   Router(config-if)#ip address 192.168.0.162 255.255.255.0
+Tue Dec 16 22:03:39 2025   Router8   Router(config-if)#ip address 192.168.0.162 255.255.255.0
+Tue Dec 16 22:03:39 2025   Router8   Router(config-if)#no shutdown
+Tue Dec 16 22:03:45 2025   Router8   Router(config-if)#ip address 192.168.0.162 255.255.254.0
+Tue Dec 16 22:03:47 2025   Router8   Router(config-if)#ip address 192.168.0.162 255.255.254.0
+Tue Dec 16 22:04:28 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:04:28 2025   Router8   Router(config)#interface Serial2/0
+Tue Dec 16 22:04:38 2025   Hawally   Router>enable
+Tue Dec 16 22:04:38 2025   Hawally   Router#configure terminal
+Tue Dec 16 22:04:38 2025   Hawally   Router(config)#interface Serial3/0
+Tue Dec 16 22:04:44 2025   Hawally   Router(config-if)#ip address 192.168.0.162 255.255.254.0
+Tue Dec 16 22:04:51 2025   Hawally   Router(config-if)#ip address 192.168.0.162 255.255.254.0
+Tue Dec 16 22:04:54 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:04:54 2025   Router8   Router(config)#interface Serial2/0
+Tue Dec 16 22:05:00 2025   Router8   Router(config-if)#no ip address
+Tue Dec 16 22:05:01 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:05:01 2025   Router8   Router(config)#interface FastEthernet0/0
+Tue Dec 16 22:05:14 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:05:14 2025   Router8   Router(config)#interface Serial2/0
+Tue Dec 16 22:05:28 2025   Router8   Router(config-if)#no ip address
+Tue Dec 16 22:05:30 2025   Router8   Router(config-if)#no shutdown
+Tue Dec 16 22:05:38 2025   Router8   Router(config-if)#no ip address
+Tue Dec 16 22:05:49 2025   Router8   Router(config-if)#no ip address
+Tue Dec 16 22:05:51 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:05:51 2025   Router8   Router(config)#interface FastEthernet0/0
+Tue Dec 16 22:06:09 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:06:09 2025   Router8   Router(config)#interface Serial2/0
+Tue Dec 16 22:06:20 2025   Router8   Router(config-if)#no ip address
+Tue Dec 16 22:06:42 2025   Router8   Router(config-if)#ip add 192.168.0.150 255.255.254.0
+Tue Dec 16 22:07:58 2025   Router8   Router>enable
+Tue Dec 16 22:07:58 2025   Router8   Router#configure terminal
+Tue Dec 16 22:07:58 2025   Router8   Router(config)#interface Serial2/0
+Tue Dec 16 22:08:09 2025   Router8   Router(config-if)#no ip address
+Tue Dec 16 22:08:10 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:08:10 2025   Router8   Router(config)#interface FastEthernet0/0
+Tue Dec 16 22:08:19 2025   Router8   Router(config-if)#ip address 192.168.0.162 255.255.254.0
+Tue Dec 16 22:08:22 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:08:22 2025   Router8   Router(config)#interface FastEthernet0/0
+Tue Dec 16 22:08:25 2025   Router8   Router(config-if)#ip address 192.168.0.1 255.255.254.0
+Tue Dec 16 22:08:50 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:08:50 2025   Router8   Router(config)#interface Serial2/0
+Tue Dec 16 22:09:01 2025   Router8   Router(config-if)#no ip address
+Tue Dec 16 22:09:59 2025   Router8   Router(config-if)#no ip address
+Tue Dec 16 22:10:13 2025   Router8   Router(config-if)#ip address 192.168.8.1 255.255.255.0
+Tue Dec 16 22:10:18 2025   Router8   Router(config-if)#ip address 192.168.8.1 255.255.255.252
+Tue Dec 16 22:10:36 2025   Hawally   Router>enable
+Tue Dec 16 22:10:36 2025   Hawally   Router#configure terminal
+Tue Dec 16 22:10:36 2025   Hawally   Router(config)#interface Serial2/0
+Tue Dec 16 22:10:36 2025   Hawally   Router(config-if)#exit
+Tue Dec 16 22:10:36 2025   Hawally   Router(config)#interface Serial3/0
+Tue Dec 16 22:10:42 2025   Hawally   Router(config-if)#ip address 192.168.8.2 255.255.254.0
+Tue Dec 16 22:10:47 2025   Hawally   Router(config-if)#ip address 192.168.8.2 255.255.255.252
+Tue Dec 16 22:11:03 2025   Hawally   Router(config-if)#exit
+Tue Dec 16 22:11:08 2025   Hawally   Router(config)#router ospf 1
+Tue Dec 16 22:11:25 2025   Hawally   Router(config-router)#net 192.168.8.0 0.0.0.3 area 0
+Tue Dec 16 22:11:33 2025   Router8   Router(config-if)#exit
+Tue Dec 16 22:11:37 2025   Router8   Router(config)#router ospf 1
+Tue Dec 16 22:11:48 2025   Router8   Router(config-router)#net 192.168.8.0 0.0.0.3 area 0
+Tue Dec 16 22:12:02 2025   Router8   Router(config-router)#net 192.16
+Tue Dec 16 22:13:18 2025   Router8   Router#config t
+Tue Dec 16 22:13:22 2025   Router8   Router(config)#router ospf 1
+Tue Dec 16 22:13:33 2025   Router8   Router(config-router)#net 192.168.0.0 0.0.0.255 area 0
+Tue Dec 16 22:13:35 2025   Router8   Router(config-router)#end
+Tue Dec 16 22:14:21 2025   Hawally   Router(config-router)#end
+Tue Dec 16 22:14:21 2025   Hawally   Router#configure terminal
+Tue Dec 16 22:14:21 2025   Hawally   Router(config)#interface Serial3/0
+Wed Dec 17 00:56:20 2025   Farwaniya   Router>enable
+Wed Dec 17 00:56:20 2025   Farwaniya   Router#configure terminal
+Wed Dec 17 00:56:20 2025   Farwaniya   Router(config)#interface FastEthernet0/0
+Wed Dec 17 00:56:24 2025   Farwaniya   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Wed Dec 17 00:58:34 2025   ASA0   ciscoasa>enable
+Wed Dec 17 00:58:34 2025   ASA0   ciscoasa#configure terminal
+Wed Dec 17 00:58:34 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/2
+Wed Dec 17 00:58:37 2025   ASA0   ciscoasa(config-if)#ip address 192.168.6.1 255.255.255.0
+Wed Dec 17 00:58:54 2025   Salmiya   Router>enable
+Wed Dec 17 00:58:54 2025   Salmiya   Router#configure terminal
+Wed Dec 17 00:58:54 2025   Salmiya   Router(config)#interface FastEthernet0/0
+Wed Dec 17 00:58:57 2025   Salmiya   Router(config-if)#ip address 192.168.5.1 255.255.255.0
+Wed Dec 17 00:59:07 2025   ASA0   ciscoasa#configure terminal
+Wed Dec 17 00:59:07 2025   ASA0   ciscoasa(config)#interface GigabitEthernet1/1
+Wed Dec 17 00:59:09 2025   ASA0   ciscoasa(config-if)#ip address 192.168.5.2 255.255.255.0
+Wed Dec 17 01:00:09 2025   Router8   Router>enable
+Wed Dec 17 01:00:09 2025   Router8   Router#configure terminal
+Wed Dec 17 01:00:09 2025   Router8   Router(config)#interface FastEthernet0/0
+Wed Dec 17 01:00:12 2025   Router8   Router(config-if)#ip address 192.168.0.1 255.255.254.0
+Wed Dec 17 01:00:23 2025   Router8   Router(config-if)#exit
+Wed Dec 17 01:00:23 2025   Router8   Router(config)#interface Serial2/0
+Wed Dec 17 01:00:25 2025   Router8   Router(config-if)#ip address 192.168.8.1 255.255.255.252
+Wed Dec 17 01:01:29 2025   Hawally   Router>enable
+Wed Dec 17 01:01:29 2025   Hawally   Router#configure terminal
+Wed Dec 17 01:01:29 2025   Hawally   Router(config)#interface Serial3/0
+Wed Dec 17 01:01:32 2025   Hawally   Router(config-if)#ip address 192.168.8.2 255.255.255.252
+Wed Dec 17 01:01:57 2025   Hawally   Router(config-if)#exit
+Wed Dec 17 01:01:57 2025   Hawally   Router(config)#interface Serial2/0
+Wed Dec 17 01:01:59 2025   Hawally   Router(config-if)#ip address 192.168.4.1 255.255.255.0
+Wed Dec 17 01:02:10 2025   Mishreb   Router>enable
+Wed Dec 17 01:02:10 2025   Mishreb   Router#configure terminal
+Wed Dec 17 01:02:10 2025   Mishreb   Router(config)#interface Serial2/0
+Wed Dec 17 01:02:40 2025   Farwaniya   Router(config-if)#exit
+Wed Dec 17 01:02:40 2025   Farwaniya   Router(config)#interface Serial2/0
+Wed Dec 17 01:02:43 2025   Farwaniya   Router(config-if)#ip address 192.168.2.2 255.255.255.0
+Wed Dec 17 01:02:46 2025   Hawally   Router(config-if)#exit
+Wed Dec 17 01:02:46 2025   Hawally   Router(config)#interface Serial7/0
+Wed Dec 17 01:03:04 2025   Hawally   Router(config-if)#exit
+Wed Dec 17 01:03:04 2025   Hawally   Router(config)#interface Serial7/0
+Wed Dec 17 01:03:18 2025   Salmiya   Router(config-if)#exit
+Wed Dec 17 01:03:18 2025   Salmiya   Router(config)#interface Serial2/0
+Wed Dec 17 01:03:20 2025   Salmiya   Router(config-if)#ip address 192.168.7.2 255.255.255.0
+Wed Dec 17 01:23:13 2025   Switch1   Switch>enable
+Wed Dec 17 01:23:13 2025   Switch1   Switch#configure terminal
+Wed Dec 17 01:35:48 2025   Switch0   Switch>en
+Wed Dec 17 01:35:49 2025   Switch0   Switch#conf t
+Wed Dec 17 01:35:54 2025   Switch0   Switch(config)#int 0/1-2/1
+Wed Dec 17 01:36:02 2025   Switch0   Switch(config)#int range fa 0/1-2/1
+Wed Dec 17 01:36:12 2025   Switch0   Switch(config)#int fa range 0/1-2/1
+Wed Dec 17 01:38:34 2025   Switch0   Switch(config)#vlan 10
+Wed Dec 17 01:38:38 2025   Switch0   Switch(config-vlan)#name staff
+Wed Dec 17 01:38:39 2025   Switch0   Switch(config-vlan)#ex
+Wed Dec 17 01:38:42 2025   Switch0   Switch(config)#vlan 20
+Wed Dec 17 01:38:47 2025   Switch0   Switch(config-vlan)#name user
+Wed Dec 17 01:39:33 2025   Switch0   Switch(config-vlan)#ex
+Wed Dec 17 01:39:39 2025   Switch0   Switch(config)#int fa 0/1
+Wed Dec 17 01:39:48 2025   Switch0   Switch(config-if)#switchport mode access
+Wed Dec 17 01:39:49 2025   Switch0   Switch(config-if)#switchport access vlan 10
+Wed Dec 17 01:39:51 2025   Switch0   Switch(config-if)#ex
+Wed Dec 17 01:39:57 2025   Switch0   Switch(config)#int fa 1/1
+Wed Dec 17 01:40:00 2025   Switch0   Switch(config-if)#switchport mode access
+Wed Dec 17 01:40:03 2025   Switch0   Switch(config-if)#switchport access vlan 10
+Wed Dec 17 01:40:06 2025   Switch0   Switch(config-if)#ex
+Wed Dec 17 01:40:10 2025   Switch0   Switch(config)#int fa /1
+Wed Dec 17 01:40:14 2025   Switch0   Switch(config)#int fa 2/1
+Wed Dec 17 01:40:23 2025   Switch0   Switch(config-if)#switchport mode access
+Wed Dec 17 01:40:24 2025   Switch0   Switch(config-if)#switchport access vlan 20
+Wed Dec 17 01:40:27 2025   Switch0   Switch(config-if)#ex
+Wed Dec 17 01:40:32 2025   Switch0   Switch(config)#int fa 3/1
+Wed Dec 17 01:40:40 2025   Switch0   Switch(config-if)#switch mode trunk
+Wed Dec 17 01:40:51 2025   Farwaniya   Router>en
+Wed Dec 17 01:40:54 2025   Farwaniya   Router#conf t
+Wed Dec 17 01:41:01 2025   Farwaniya   Router(config)#int fa 0/0
+Wed Dec 17 01:41:05 2025   Farwaniya   Router(config-if)#no ip add
+Wed Dec 17 01:41:07 2025   Farwaniya   Router(config-if)#no shut
+Wed Dec 17 01:41:14 2025   Farwaniya   Router(config-if)#ex
+Wed Dec 17 01:41:18 2025   Farwaniya   Router(config)#int fa 0/0.10
+Wed Dec 17 01:41:28 2025   Farwaniya   Router(config-subif)#encap dot1q 10
+Wed Dec 17 01:41:33 2025   Farwaniya   Router(config-subif)#ip address 192.168.1.1 255.255.255.128
+Wed Dec 17 01:41:45 2025   Farwaniya   Router(config-subif)#ex
+Wed Dec 17 01:41:51 2025   Farwaniya   Router(config)#int fa 0/0.20
+Wed Dec 17 01:41:58 2025   Farwaniya   Router(config-subif)#encap dot1q 20
+Wed Dec 17 01:42:06 2025   Farwaniya   Router(config-subif)#ip address 192.168.1.129 255.255.255.128
+Wed Dec 17 01:53:59 2025   ASA0   ciscoasa>en
+Wed Dec 17 01:54:03 2025   ASA0   ciscoasa#access-list OUTSIDE_IN extended deny ip host 192.168.1.12 host 192.168.6.11
+Wed Dec 17 01:54:08 2025   ASA0   ciscoasa#conf t
+Wed Dec 17 01:54:10 2025   ASA0   ciscoasa(config)#access-list OUTSIDE_IN extended deny ip host 192.168.1.12 host 192.168.6.11
+Wed Dec 17 01:54:18 2025   ASA0   ciscoasa(config)#access-list OUTSIDE_IN extended permit ip any any
+Wed Dec 17 01:54:31 2025   ASA0   ciscoasa(config)#access-group OUTSIDE_IN in interface outside
+Wed Dec 17 02:05:17 2025   Salmiya   Router>en
+Wed Dec 17 02:05:20 2025   Salmiya   Router#sh ip route
+Wed Dec 17 02:05:42 2025   Salmiya   Router#sh ip ospf nei
+Wed Dec 17 02:16:03 2025   Farwaniya   Router>en
+Wed Dec 17 02:16:07 2025   Farwaniya   Router#sh ip route
+Wed Dec 17 02:17:59 2025   Mishreb   Router>en
+Wed Dec 17 02:18:01 2025   Mishreb   Router#sh ip route
+Wed Dec 17 02:18:58 2025   Router8   Router>en
+Wed Dec 17 02:19:00 2025   Router8   Router#sh ip route
